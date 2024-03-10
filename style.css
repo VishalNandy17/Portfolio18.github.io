@@ -1,0 +1,1097 @@
+/* Webkit Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.icon {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.icon span {
+  display: inline-block;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.icon span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.icon span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.icon span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.icon span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.icon span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.icon span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.icon span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.icon span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.icon span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.icon span:nth-child(10) {
+  animation-delay: 1s;
+}
+.icon span:nth-child(11) {
+  animation-delay: 1.1s;
+}
+.icon span:nth-child(12) {
+  animation-delay: 1.2s;
+}
+.icon span:nth-child(13) {
+  animation-delay: 1.3s;
+}
+.icon span:nth-child(14) {
+  animation-delay: 1.4s;
+}
+.icon span:nth-child(15) {
+  animation-delay: 1.5s;
+}
+.icon span:nth-child(16) {
+  animation-delay: 1.6s;
+}
+.icon span:nth-child(17) {
+  animation-delay: 1.7s;
+}
+.icon span:nth-child(18) {
+  animation-delay: 1.8s;
+}
+.icon span:nth-child(19) {
+  animation-delay: 1.9s;
+}
+.icon span:nth-child(20) {
+  animation-delay: 2s;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  header {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border-radius: 10px;
+    /* height: 80px; */
+    margin-top: 20px;
+    color: white; /* Set text color to white */
+}
+  
+header nav {
+    display: flex;
+    justify-content: space-between; /* Adjust to create space between logo and links */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px; /* Adjust margin as needed */
+    position: relative; 
+    color: white; /* Set text color to white */
+}
+
+nav li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust the distance from the link */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the shadow */
+    background-color: rgb(0, 0, 0); /* Color of the shadow */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+nav li:hover::after {
+    opacity: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Set text color to white */
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    z-index: -1;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+nav a:hover {
+    color: white; /* Set text color to white */
+    font-weight: bold;
+}
+
+nav a:hover::after {
+    background-color: white; /* Set background color to white */
+}
+
+.my-logo {
+    margin-right: auto; /* Pushes the logo to the left */
+    width: 350px; 
+    height: 20px;
+    color: white;
+}
+
+
+
+
+/* .black-logo {
+    width: 350px; 
+    height: 50px; 
+} */
+
+#hero {
+  padding: 60px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow elements to wrap when the container is too small */
+}
+
+.nam {
+  text-align: center;
+}
+
+.nam h3{
+  margin: 0;
+  color: #999;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nam h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.intro {
+  text-align: center;
+  color: white;
+}
+
+.me {
+  margin-top: 20px; /* Adjust the margin between the text and the image */
+}
+
+.me img {
+  height: 470px;
+  width: 470px;
+  border-radius: 50%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.logos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logos ul li {
+  display: inline-block;
+  margin-right: 20px; /* Increase the distance between icons */
+}
+
+.logos ul li:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+
+.logos ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px; /* Adjust width and height for larger circles */
+  height: 70px;
+  border-radius: 50%;
+  background-color: black;
+  text-align: center;
+  line-height: 50px; /* Change to 70px to center vertically */
+  text-decoration: none; /* Remove underlines */
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smoother effect */
+  border: 2px solid black; /* Add border */
+}
+
+.logos ul li a i {
+  color: white;
+  font-size: 24px;
+}
+
+.logos ul li a:hover {
+  background-color: white; /* Change background color on hover */
+  border-color: white; /* Change border color on hover */
+}
+
+.logos ul li a:hover i {
+  color: black; /* Change icon color on hover */
+}
+
+/* Cursor animation */
+.typing-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background-color: #000;
+  animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+      opacity: 0;
+  }
+}
+
+/* Falling animation */
+.fall-in {
+  animation: fall-in 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fall-in {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+#projects {
+  padding: 60px;
+  position: relative;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  width: 700px;
+  height: 350px;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1em;
+}
+
+.expln-project {
+  text-align: center;
+}
+
+
+.intro-project{
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+  /* Existing styles from before */
+/* Existing styles */
+
+/* Container Styles */
+
+.clip-art img {
+  background-color: transparent; /* Remove background color */
+  width: 281px; /* Set the width to make it bigger */
+  height: 355px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.action-wala {
+  padding-left: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* Add some margin to separate the sections */
+}
+
+.clip-art {
+  margin-right: 20px; /* Add margin to create space between the image and the form */
+}
+
+.form-of {
+  display: flex;
+  flex-direction: row; /* Align form elements vertically */
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  width: 850px;
+  height: 450px;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; 
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.namee,
+.emaill,
+.messagee {
+  height: 60px;
+  width: 450px;
+  border-radius: 10px;
+  border-color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #3b95b6;
+  background-color: #ffffff;
+}
+
+.messagee {
+  height: 90px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+button {
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #160c55;
+  color: #000000;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+button:hover {
+    background-color: #686868;
+}
+/* Existing styles from before */
+
+/* Styles for the about section */
+
+
+.skill-grid {
+  margin-left: 30px;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: #000;
+}
+
+.skills-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #000;
+  animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  width: 100px;
+  height: 10px;
+  background-color: #000;
+  margin: 0 auto;
+  border-radius: 6px; /* Added border radius */
+  position: relative; /* Added position relative for percentage */
+  overflow: hidden; /* Added overflow to hide overflowing text */
+}
+
+.progress-value {
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 6px; /* Added border radius */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black; /* Changed color to black */
+  padding: 2px 5px;
+  font-size: 0.8em;
+  animation: increaseWidth 1s forwards; /* Added animation */
+}
+
+@keyframes increaseWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.skills {
+  background-color: #222; /* Adjust background color as needed */
+  color: #fff; /* Adjust font color as needed */
+  padding: 50px 0;
+}
+
+.container-skill {
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center; /* Center the content inside the container */
+}
+
+.intro-skill h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.intro-skill h2 {
+  color: black;
+}
+
+.expln-skill {
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.skill h2 {
+  color: #000;
+}
+
+.skill {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  color: #000;
+}
+
+
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background1.jpg'); /* Specify your background image URL here */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Apply blur effect to the background image */
+  z-index: -1; /* Ensure the background image stays behind other content */
+}
+
+.info {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a box shadow for depth */
+  padding: 40px;
+  flex: 1;
+  z-index: 1; /* Ensure the info div stays above the background image */
+}
+
+
+.info .section-content {
+  backdrop-filter: blur(10px); /* Apply blur effect to the content inside the info div */
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.section-content p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #000;
+  animation: blink 0.7s infinite alternate;
+}
+
+.section-title a {
+  text-decoration: none;
+}
+
+.section-title a i {
+  color: white;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+.about-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: #efefef;
+}
+
+.picture-img {
+  filter: grayscale(100%); /* Turn the image black and white */
+  transition: filter 0.5s ease; /* Add transition effect */
+}
+
+.picture-img:hover {
+  filter: grayscale(0%); /* Return the image to its original colors on hover */
+  box-shadow: #000;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.picture {
+    margin-left: 20px; /* Adding space between the picture and the about section */
+    padding: 20px;
+}
+
+.picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adding a box shadow for depth */
+    height: 630px;
+    width: 500px;
+}
+
+
+.footer {
+  background-color: #424769;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-column, .middle-column, .right-column {
+  flex: 1;
+}
+
+.footer-logo {
+  font-size: 2em;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.footer-para {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.footer-links {
+  text-align: left;
+}
+
+.footer-links h3 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contact {
+  text-align: left;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 0%;
+}
+
+.footer-social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+  margin: 0 10px;
+}
+
+.footer-social a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+}
+
+
+  .html, .css, .js, .py{
+    height: 50px;
+    width: 50px;
+    border-radius: 0%;
+  }
+
+  .wp, .bt{
+    height: 50px;
+    width: 50px;
+    border-radius: 0%;
+  }
+  
+
+  .black-logo{
+    height: 70px;
+    width: 100px;
+    margin-left: 40px;
+    border-radius: 0%;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .floating-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #4352628b;
+    border-radius: 50%;
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  
+  .Download_CV {
+    border: 2px solid black; /* Set border properties */
+    border-radius: 30px; /* Set border radius */
+    background-color: white; /* Set background color */
+    color: black; /* Set text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-left: 20px; /* Adjust margin to create space between button and nav elements */
+}
+.Download_CV:hover {
+  background-color: black; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.consult {
+  margin-top: 30px; /* Ensure at least 30px space below "Vishal Nandy" */
+}
+
+.consult button {
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  margin-left: 20px; 
+}
+
+.consult button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.header-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.picture {
+  flex: 1;
+}
+
+.picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+.section-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.section-content p {
+  margin-bottom: 15px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact li {
+  margin-bottom: 5px;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-container {
+  flex: 2;
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 8px; /* Add border radius */
+  padding: 20px;
+  background-color: #f9f9f9; /* Add background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Adjust font size */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #001369;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4556a0; /* Darker green on hover */
+}
+
+/* Adjustments for the labels and placeholders */
+input::placeholder,
+textarea::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+.intro-project{
+  display: flex;
+  flex-direction: center;
+}
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none; /* Ensure the background image doesn't interfere with mouse events */
+  background-image: url('background1.jpg'); /* Specify your background image URL here */
+  background-size: cover;
+  filter: blur(5px); /* Apply blur effect to the background image */
+}
+
+.spider-web {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Ensure the spider-web is behind the background image */
+  pointer-events: none; /* Ensure the spider-web doesn't interfere with mouse events */
+  background-image: radial-gradient(#ffffff 1px, transparent 1px), radial-gradient(#ffffff 1px, transparent 1px);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.stars {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place stars behind content */
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: starFall linear infinite; /* Animation for star falling */
+}
+
+.content {
+  padding: 20px;
+}
+
+@keyframes starFall {
+  from {
+    top: -10%; /* Start from above the viewport */
+    opacity: 0; /* Initially invisible */
+  }
+  to {
+    top: 110%; /* Move to below the viewport */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.submit-f{
+  height: 50px;
+  border-radius: 10px;
+}
+
+.fa-solid fa-arrow-right{
+  color: white;
+}
+
+.expln-project p{
+  color: white;
+}
